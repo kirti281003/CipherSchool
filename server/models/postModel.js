@@ -31,6 +31,10 @@ likes:{
 dislikes:{
     type:[String],
     default:[]
+},
+comments:{
+type:[String],
+default:[]
 }
 
 

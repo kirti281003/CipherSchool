@@ -15,6 +15,12 @@ password:{
     type:String,
     required:true
 },
+liked:{
+    type:[String]
+},
+disliked:{
+    type:[String]
+}
 
 })
 userSchema.pre("save",async function(next){

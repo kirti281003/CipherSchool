@@ -14,7 +14,9 @@ app.use(fileUpload({
 }))
 const user=require("./routes/userRoute");
 const video=require("./routes/postRoute");
+const comment=require("./routes/commentRoute");
 app.use("/api/v1",user);
 app.use("/api/v1",video);
+app.use("/api/v1",comment);
 app.use(errorMiddleware);
 module.exports=app;

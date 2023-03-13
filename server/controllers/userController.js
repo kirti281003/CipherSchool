@@ -1,5 +1,6 @@
 const catchAsyncErrors = require("../middleware/catchAsyncErrors");
 const User=require("../models/userModel");
+const Post=require("../models/postModel");
 const ErrorHandler = require("../utils/errorHandler");
 const sendToken = require("../utils/jwtToken");
 
@@ -72,10 +73,17 @@ exports.getUser=catchAsyncErrors(async(req,res,next)=>{
         user
     })
 })
-exports.like=catchAsyncErrors(async(req,res,next)=>{
-    
-})
 
-exports.dislike=catchAsyncErrors(async(req,res,next)=>{
-    
+exports.getLiked=catchAsyncErrors(async(req,res,next)=>{
+    const user=await User.findById(req.user.id);
+    const liked=user.liked;
+    const videos=[];
+    for(var i=0;i<liked.length;i++)
+    {const video=await Post.findById(liked[i]);
+         videos.push(video);
+    }
+    res.status(200).json({
+        success:true,
+        videos
+    })
 })

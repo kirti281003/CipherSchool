@@ -11,7 +11,7 @@ const comment =await Comment.create({
     desc:desc
 });
 const video=await Post.findByIdAndUpdate(req.params.id,{
-    $push:{comments:comment.id}
+  $push:{comments:{name:req.user.name,desc:desc}}
 },{new:true})
 res.status(200).json({
     success:true,

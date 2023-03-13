@@ -32,10 +32,16 @@ dislikes:{
     type:[String],
     default:[]
 },
-comments:{
-type:[String],
-default:[]
+comments:[{
+name:{
+    type:String,
+    required:true
+},
+desc:{
+    type:String,
+    required:true
 }
+}]
 
 
 

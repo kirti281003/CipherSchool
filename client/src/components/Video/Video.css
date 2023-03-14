@@ -1,0 +1,22 @@
+.player{
+   width:40rem;
+   position: absolute;
+   top:4rem;
+   left:4rem;
+}
+.videodesc{
+    width:40rem;
+    position: absolute;
+    top:4rem;
+    left:50rem;
+    color:white;
+}
+.like{
+    color:white;
+  
+}
+.likebutton{
+    background-color: transparent;
+    margin-top: 1rem;
+    border:none
+}

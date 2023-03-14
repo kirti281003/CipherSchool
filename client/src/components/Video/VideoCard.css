@@ -1,0 +1,14 @@
+.Videolink{
+    text-decoration: none;
+}
+.Videolink h1{
+    color:white;
+    text-decoration: none;
+
+    margin-top: -0.5rem;
+
+}
+img{
+    height:200px;
+    border-radius: 10px;
+}

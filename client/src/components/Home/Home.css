@@ -1,0 +1,21 @@
+.Homebar{
+    color:white;
+    position: absolute;
+    top:4rem;
+    left:10rem;
+}
+.Homebar h1{
+    width:30vw;
+    font-size: 3rem;
+}
+.Homebar p{
+    font-size: 1.5rem;
+}
+.videos{
+    position: absolute;
+    top:25rem;
+    left:4rem;
+    display: flex;
+    flex-wrap: wrap;
+    
+}

@@ -1,0 +1,30 @@
+
+import { LOGIN_USER_FAIL, LOGIN_USER_REQUEST, LOGIN_USER_SUCCESS } from "../constants/userConstant";
+
+export const userReducer=(state={},action)=>{
+    switch(action.type){
+        case LOGIN_USER_REQUEST:
+            return{
+            isAuthenticated:false,
+            user:{},
+            loading:true
+            };
+            case LOGIN_USER_SUCCESS:
+                return{
+                    ...state,
+                    isAuthenticated:true,
+                    user:action.payload,
+                    loading:false
+
+                };
+                case LOGIN_USER_FAIL:
+                    return{
+                    isAuthenticated:false,
+                    user:{},
+                    loading:false,
+                    error:action.payload
+
+                }
+                default:return state
+    }
+}

@@ -5,10 +5,13 @@ import { BrowserRouter,Route,Routes } from 'react-router-dom';
 import Home from './components/Home/Home';
 import Video from './components/Video/Video';
 import Post from './components/Video/Post';
+import SideNav from './components/SideNav/Header';
+import Header from './components/SideNav/Header';
 function App() {
   return (
     <div className="App">
         <BrowserRouter>
+      <Header/>
           <Routes>
           <Route path="/" element={<Home/>}/>
             <Route path="/signin" element={<Login/>}/>

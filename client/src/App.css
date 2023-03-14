@@ -1,3 +1,6 @@
 body{
-  background-color: #0d0c0f;
+  background: linear-gradient(135deg, var(--main-blue), var(--main-purple));
+}
+body,html{
+  overflow-x: hidden;
 }

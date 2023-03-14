@@ -1,22 +1,66 @@
+.videotitle{
+    color:white;
+    margin-top: 2rem;
+margin-left: 4rem;
+    position: absolute;
+    top:3rem;
+    
+}
 .player{
-   width:40rem;
-   position: absolute;
-   top:4rem;
-   left:4rem;
+    height:30vh;
+    width:45vw;
+    position: absolute;
+    top:7rem;
+    margin-top:1.5rem;
+    margin-left: 4rem;
+
 }
 .videodesc{
-    width:40rem;
+    width:50vw;
     position: absolute;
-    top:4rem;
-    left:50rem;
-    color:white;
+    bottom:0rem;
+    margin-left: 4rem;
+    color:white
+}
+.videodesc h4{
+
+    display: inline-block;
+}
+.reaction{
+    display: inline-block;
+    margin-left: 35vw;;
 }
 .like{
     color:white;
-  
+    margin-left: 2rem;
 }
-.likebutton{
-    background-color: transparent;
-    margin-top: 1rem;
-    border:none
+@media(max-width:700px)
+{
+    .videotitle{
+        color:white;
+        margin-top: 4rem;
+    margin-left: 1rem;
+        position: absolute;
+        top:4rem;
+        font-size: 1.5rem;
+        
+    }
+    .player{
+        height:30vh;
+        width:90vw;
+        position: absolute;
+        top:10rem;
+        margin-top:1.5rem;
+        margin-left: 1rem;
+    
+    }
+    .videodesc{
+        width:100vw;
+        position: absolute;
+   bottom:-2rem;
+        margin-top: 3rem;
+        margin-left: 0rem;
+        color:white;
+        font-size: 1rem;
+    }
 }

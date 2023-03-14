@@ -1,14 +1,40 @@
 .Videolink{
     text-decoration: none;
+    margin: 3rem;
 }
 .Videolink h1{
     color:white;
     text-decoration: none;
-
-    margin-top: -0.5rem;
+font-size: 1.2rem;
+    margin-top: 0rem;
 
 }
 img{
-    height:200px;
+   width:20vw;
+   height:12vw;
     border-radius: 10px;
+}
+.Videolink:hover{
+    background-color: transparent;
+    transform: scale(1.2);
+}
+@media(max-width:700px)
+{
+    .Videolink{
+        text-decoration: none;
+        margin: 0rem;
+    }
+    .Videolink h1{
+        color:white;
+        text-decoration: none;
+    font-size: 1.2rem;
+        margin-top: 0rem;
+    
+    }
+    img{
+       width:90vw;
+       height:40vw;
+        border-radius: 10px;
+        margin-top: 2rem;
+    }
 }

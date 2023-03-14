@@ -4,30 +4,48 @@ import { useParams } from "react-router-dom";
 import { getPost } from "../../actions/postAction";
 import { Player } from 'video-react';
 import "./Video.css";
+import CommentSection from "./CommentSection";
 
 function Video()
-{const dispatch=useDispatch();
+{var style={
+  color:"white"
+};
+function like()
+{
+  style={color:"yellow"}
+}
+  
+  const dispatch=useDispatch();
+  const {video,loading}=useSelector(state=>state.video);
   const{id}=useParams();
-  console.log(id);
   useEffect(()=>{
-    dispatch(getPost(id))
+dispatch(getPost(id))
   },[dispatch,id])
-  const{video}=useSelector(state=>state.video)
+if(video)
+{
   return(
     <>
+    <h1 className="videotitle">{video.title}</h1>
     <div className="player">
-   <Player
+    <Player
       playsInline
       poster={video.imgUrl}
       src={video.videoUrl}
     />
     </div>
     <div className="videodesc">
-      <h1>{video.title}</h1>
-      <p>{video.desc}</p>
+    
+    <h4>{video.views} Views</h4>
+    <div className="reaction">
+  <i class=" like  fa-sharp fa-solid fa-thumbs-up" onClick={like} style={style}></i>
+    <i class=" like  fa-sharp fa-solid fa-thumbs-down" onClick={like} style={style}></i>
     </div>
    
+      <p>{video.desc}...</p>
+    </div>
+    <CommentSection/>
     </>
   )
+}
 }
 export default Video;

@@ -22,7 +22,9 @@ function Home()
 <h1>Welcome To The Future Of Learning</h1>
 <p>Start Learning by best creators for absolutely free</p>
 </div>
+ 
  <div className="videos">
+ <h3>Videos </h3>
  {videos &&
  videos.map(video=>(
     <VideoCard video={video}></VideoCard>

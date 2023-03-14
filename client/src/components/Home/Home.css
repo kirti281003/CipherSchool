@@ -1,7 +1,7 @@
 .Homebar{
     color:white;
     position: absolute;
-    top:4rem;
+    top:8rem;
     left:10rem;
 }
 .Homebar h1{
@@ -17,5 +17,34 @@
     left:4rem;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-around;
     
+}
+.videos h3{
+    color:white
+}
+@media(max-width:700px)
+{
+    .Homebar{
+        color:white;
+        position: absolute;
+        top:8rem;
+        left:2rem;
+    }
+    .Homebar h1{
+        width:90vw;
+        font-size: 2rem;
+    }
+    .Homebar p{
+        font-size: 1.5rem;
+    }
+    .videos{
+        position: absolute;
+        top:20rem;
+        left:0rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        
+    } 
 }

@@ -23,8 +23,16 @@
 .videos h3{
     color:white
 }
+.home{
+    position: absolute;
+    right:6rem;
+    height:20rem;
+    width:20rem;
+}
 @media(max-width:700px)
-{
+{.home{
+    display:none;
+}
     .Homebar{
         color:white;
         position: absolute;

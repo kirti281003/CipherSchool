@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { allPosts } from "../../actions/postAction";
 import VideoCard from "../Video/VideoCard";
+import home from "../../images/home.png";
 import "./Home.css";
 
 function Home()
@@ -22,9 +23,9 @@ function Home()
 <h1>Welcome To The Future Of Learning</h1>
 <p>Start Learning by best creators for absolutely free</p>
 </div>
- 
+ <img src={home} className="home"></img>
  <div className="videos">
- <h3>Videos </h3>
+
  {videos &&
  videos.map(video=>(
     <VideoCard video={video}></VideoCard>

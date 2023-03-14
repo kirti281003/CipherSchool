@@ -10,6 +10,8 @@ function Login()
     function loginSubmit(e)
     {e.preventDefault();
         dispatch(login(email,password));
+        window.alert("Succesful Login");
+        window.location.href="/";
 
     }
     useEffect(()=>{
